@@ -216,8 +216,7 @@ module.exports = client = async (client, mek) => {
     type === 'imageMessage' && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : 
     type === 'videoMessage' && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : 
     type === 'extendedTextMessage' && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : 
-    type === 'buttonsResponseMessage' && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : 
-    type === 'listResponseMessage' && mek.message[type].singleSelectReply.selectedRowId ? mek.message[type].singleSelectReply.selectedRowId : ''.slice(1).trim().split(/ +/).shift().toLowerCase();
+    type === 'buttonsResponseMessage' && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : ''.slice(1).trim().split(/ +/).shift().toLowerCase();
 
       if(Use.multi){
         var prefix = /^[°•π÷×¶∆£¢€¥®™✓=|~zZ+×_*!#%^&./\\©^]/.test(cmd) ? cmd.match(/^[°•π÷×¶∆£¢€¥®™✓=|~xzZ+×_*!#,|÷?;:%^&./\\©^]/gi) : '-';
@@ -232,8 +231,7 @@ const body =
      type === 'imageMessage' && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : 
      type === 'videoMessage' && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : 
      type === 'extendedTextMessage' && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : 
-     type === 'buttonsResponseMessage' && mek.message[type].selectedButtonId.startsWith(prefix) ? mek.message[type].selectedButtonId :
-     type === 'listResponseMessage' && mek.message[type].singleSelectReply.selectedRowId(prefix) ? mek.message[type].singleSelectReply.selectedRowId : '';
+     type === 'buttonsResponseMessage' && mek.message[type].selectedButtonId.startsWith(prefix) ? mek.message[type].selectedButtonId : '';
      
      
      const budy = 
@@ -241,7 +239,6 @@ const body =
      type === 'extendedTextMessage' ? mek.message.extendedTextMessage.text :
      type === 'imageMessage' ? mek.message.imageMessage.caption : 
      type === 'videoMessage' ? mek.message.videoMessage.caption : 
-     type === 'listResponseMessage' ? mek.message.listResponseMessage.title : 
      type === 'stickerMessage' ? 'Sticker' :
      type === 'audioMessage' ? 'Audio' : '';
      const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase();
