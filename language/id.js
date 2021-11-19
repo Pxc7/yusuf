@@ -69,6 +69,9 @@ Contoh :  .bahasa english`;
 exports.online = 'Perintah diterima menyalakan bot di dalam group ini';
 exports.offline = 'Perintah diterima mematikan bot di dalam group ini';
 
+// -- banned
+exports.banned = 'Mohon maaf kamu telah terbanned, akibatnya kamu tidak bisa menggunakan command apapun!\nAgar banned terbuka, hubungi owner dengan ketik .owner'
+
 // -- group
 exports.onwa = 'User sudah berada didalam group';
 exports.sendlink = 'Sukses mengirim undangan ke ';

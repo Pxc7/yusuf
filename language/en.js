@@ -65,6 +65,9 @@ Usable language
 exports.online = 'Successfully turned on the bot in this group';
 exports.offline = 'Successfully turned off bots in this group';
 
+// -- banned
+exports.banned = 'Sorry you have been blocked, sorry you cant use any commands!\nTo unlock, contact the owner by typing .owner'
+
 // -- group
 exports.onwa = 'The user is already in the group';
 exports.sendlink = 'Send an invitinvitation';
