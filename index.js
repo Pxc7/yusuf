@@ -900,7 +900,7 @@ break
  break
  
  case 'shouta':
-    shot = ['shouta anime', 'shouta wallpaper']
+    shot = ['shouta', 'shouta wallpaper']
     ta = pickRandom(shot)
     m.reply(msg.wait)
     wall = await lxa.pinterest(ta)
@@ -1277,7 +1277,7 @@ case "slow":
 case 'bc':
 if (!isOwner) return reply(`Khusus Owner!`)     
 anu = await client.chats.all()
-caption = `${value}\n\n${readMore}*BROADCAST*`
+caption = `${value}\n\n${readMore}𝗕𝗥𝗢𝗔𝗗𝗖𝗔𝗦𝗧`
 for (let _ of anu) {
 client.sendMessage(_.jid, caption, text, { contextInfo: { forwardingScore: 100, isForwarded: true }})
 }
@@ -2435,7 +2435,7 @@ break
  case 'mathkuis':
  client.game = client.game ? client.game : {}
  if(itsMe) return
- if (!value) return m.reply(`Pilih Levelnya!\n\nList Level\n-easy\n-medium\n-hard\n-impossible\n\n${readMore}Contoh Penggunaan\n.mathkuis hard`)
+ if (!value) return m.reply(`Pilih Levelnya!\n\nList Level\n-easy\n-medium\n-hard\n-impossible\n\n${readMore}Contoh:\n.mathkuis hard`)
     if (from in client.game) {
         client.reply(from, msg.onGame, client.game[from][0])
         return false
@@ -2447,7 +2447,7 @@ break
         await client.reply(from, caption, m),
         buh_result.jawaban,
         setTimeout(() => {
-          capt = client.game[from][1].replace(/[123456789]/gi, '_')
+          capt = client.game[from][1].replace(/[1230]/gi, '_')
           m.reply("*Clue*\n"+capt.toUpperCase())
         }, isGamewaktu - 10000),
         setTimeout(() => {
@@ -2472,7 +2472,7 @@ break
         await client.reply(from, caption, m),
         json.jawaban,
         setTimeout(() => {
-          capt = client.game[from][1].replace(/[aiueoAIUEO]/gi, '▢')
+          capt = client.game[from][1].replace(/[aiueoAIUEO]/gi, '_')
           m.reply("*Clue*\n"+capt.toUpperCase())
         }, isGamewaktu - 10000),
         setTimeout(() => {
