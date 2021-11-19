@@ -2447,7 +2447,7 @@ break
         await client.reply(from, caption, m),
         buh_result.jawaban,
         setTimeout(() => {
-          capt = client.game[from][1].replace(/[1230]/gi, '_')
+          capt = client.game[from][1].replace(/[123450]/gi, '_')
           m.reply("*Clue*\n"+capt.toUpperCase())
         }, isGamewaktu - 10000),
         setTimeout(() => {
