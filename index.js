@@ -546,6 +546,10 @@ Hi ${pushname} ${ucapanWaktu}
                     m.reply(ini_txt)
                     break
   
+  case 'runtime':
+  m.reply(`*Runtime* : ${kyun(process.uptime())}`)
+  break
+  
   case 'owner':
   case 'author':
     number = '62814622392081@s.whatsapp.net'
@@ -613,7 +617,7 @@ Hi ${pushname} ${ucapanWaktu}
 
 ( OWNER )
 
-- Instagram : https://www.instagram.com/riugnz_
+- Instagram : https://www.instagram.com/riuganz_
 - WhatsApp : wa.me/62814622392081
 
 
@@ -631,6 +635,7 @@ Hi ${pushname} ${ucapanWaktu}
  case 'typewriter':
  case 'sans':
  case 'castle':
+ case 'comic':
   if(!value) return m.reply(msg.notext)
   if(command === "namaninja" ) {
     has = await lxa.namaninja(value)
@@ -644,6 +649,8 @@ Hi ${pushname} ${ucapanWaktu}
     has = await lxa.castle(value)
   } else if(command === "purba"){
     has = await lxa.purba(value)
+  } else if(command === "comic"){
+    has = await lxa.comic(value)
   }
    m.reply(has)
    break
@@ -2447,7 +2454,7 @@ break
         await client.reply(from, caption, m),
         buh_result.jawaban,
         setTimeout(() => {
-          capt = client.game[from][1].replace(/[123450]/gi, '_')
+          capt = client.game[from][1].replace(/[1-5]/gi, '_')
           m.reply("*Clue*\n"+capt.toUpperCase())
         }, isGamewaktu - 10000),
         setTimeout(() => {
