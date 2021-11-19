@@ -59,7 +59,7 @@ const { RandomCerpen } = require('./search/cerpen');
 
 // information
 const { covid  } = require('./informasi/corona');
-const { namaninja, purba, blackpill, typewriter, sans, castle } =  require('./informasi/text_generator');
+const { namaninja, purba, blackpill, typewriter, sans, comic, castle } =  require('./informasi/text_generator');
 
 
 module.exports = {
@@ -76,6 +76,7 @@ module.exports = {
   blackpill, 
   typewriter, 
   sans, 
+  comic,
   castle,
   pinterest,
   playstore,
