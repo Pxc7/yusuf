@@ -219,6 +219,40 @@ hasil = teks.replace(/[a-zA-Z0-9]/g, v => {
   return hasil;
 }
 
+async function comic(teks){
+hasil = teks.replace(/[a-z]/g, v => {
+        switch (v) {
+            case 'a': return 'ᗩ';
+            case 'b': return 'ᗷ';
+            case 'c': return 'ᑕ';
+            case 'd': return 'ᗪ';
+            case 'e': return 'ᗴ';
+            case 'f': return 'ᖴ';
+            case 'g': return 'ᘜ';
+            case 'h': return 'ᕼ';
+            case 'i': return 'I';
+            case 'j': return 'ᒍ';
+            case 'k': return 'K';
+            case 'l': return 'ᒪ';
+            case 'm': return 'ᗰ';
+            case 'n': return 'ᑎ';
+            case 'o': return 'O';
+            case 'p': return 'ᑭ';
+            case 'q': return 'ᑫ';
+            case 'r': return 'ᖇ';
+            case 's': return 'Տ';
+            case 't': return 'T';
+            case 'u': return 'ᑌ';
+            case 'v': return 'ᖴ';
+            case 'w': return 'ᗯ';
+            case 'x': return '᙭';
+            case 'y': return 'Y';
+            case 'z': return 'ᘔ';
+}
+    });
+  return hasil;
+}
+
 async function castle(teks){
 hasil = teks.replace(/[a-zA-Z0-9]/g, v => {
         switch (v) {
@@ -297,5 +331,6 @@ module.exports = {
   blackpill,
   typewriter,
   sans,
+  comic,
   castle,
 }
