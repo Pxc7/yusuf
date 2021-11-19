@@ -472,7 +472,7 @@ switch (command) {
 
 
 if (isGroup && isOffline === true) return; // ketik offline menyala bot tidak akan membalas perintah apapun dalam group tertentu
-if (isBanned) return; // user dengan status banned tidak akan bisa menggunakan command
+if (isBanned) return m.reply(msg.banned) // user dengan status banned tidak akan bisa menggunakan command
 
 switch (command) { 
  
@@ -918,10 +918,10 @@ client.sendButtonImg(from, hasil3, 'Result from : *nekos.life*', `${command}`, '
 break
  
  case 'cosplay':
-    cos = ['cosplay anime', 'cosplay anime cewe', 'cosplay anime cowo']
-    play = pickRandom(cos)
+    cos = ['cosplay']
+    playnya = pickRandom(cos)
     m.reply(msg.wait)
-    woss = await lxa.pinterest(play)
+    woss = await lxa.pinterest(playnya)
     pan = pickRandom(woss)
     if(!pan) return m.reply('Error')
     client.sendButtonImg(from, await getBuffer(pan), 'Result from : *raw.githubsercontent.com*\n\n'+pan, `${command}`, 'Next', prefix + 'cosplay', mek)
